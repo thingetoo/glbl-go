@@ -8,20 +8,20 @@ class Directory extends React.Component {
         this.state = {
             sections: [
                 {
-                    title: 'tops',
-                    imageUrl: 'https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg',
+                    title: 'hats',
+                    imageUrl: 'https://i.pinimg.com/originals/22/b0/65/22b0653347a96bc4e6b7b50e8480f492.jpg',
                     id: 1,
                     linkUrl: ''
                 },
                 {
-                    title: 'hats',
-                    imageUrl: 'https://ae01.alicdn.com/kf/HTB1BCVaFv5TBuNjSspmq6yDRVXaV/LDSLYJR-Flower-print-Bucket-Hat-Fisherman-Hat-outdoor-travel-hat-Sun-Cap-Hats-for-Men-and.jpg_Q90.jpg_.webp',
+                    title: 'sneakers',
+                    imageUrl: 'https://i.pinimg.com/originals/4d/88/85/4d8885f440b275c64305a10db701ec6c.jpg',
                     id: 2,
                     linkUrl: 'hats'
                 },
                 {
-                    title: 'masks',
-                    imageUrl: 'https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/CJS3YQOBEVANBJVSVPZKSWN5WY.jpeg',
+                    title: 'jackets',
+                    imageUrl: 'https://i.pinimg.com/originals/a2/18/c2/a218c2779d582d14b11b3d29ae2360ae.jpg',
                     id: 3,
                     linkUrl: ''
                 },
