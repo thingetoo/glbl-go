@@ -9,5 +9,6 @@ a {
 }
 
 * {
-    box-sizing: border-box;
+    /* fix */
+    box-sizing: border-box; 
 }
