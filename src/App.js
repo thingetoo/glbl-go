@@ -20,7 +20,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() { // alerts us that the state of the user has changed (signed in/signed out) - alerts us of any auth changes
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => { 
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth)
 
@@ -40,7 +40,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() { // to prevent memory leaks
-    this.unsubscribeFromAuth();
+    this.unsubscribeFromAuth(); //close the subscription
   }
 
 

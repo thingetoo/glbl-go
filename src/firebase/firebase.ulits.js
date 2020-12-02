@@ -39,12 +39,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 }
 
 firebase.initializeApp(config);
-export const auth = firebase.auth();
+export const auth = firebase.auth(); //export so we can use anywhere we need authentication
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' })
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+const provider = new firebase.auth.GoogleAuthProvider(); //
+provider.setCustomParameters({ prompt: 'select_account' }) // always trigger google popup whenevr we use the google auth provider
+export const signInWithGoogle = () => auth.signInWithPopup(provider); 
 
 export default firebase;
 
