@@ -13,19 +13,19 @@ const config = {
     measurementId: "G-2VDS9X3LNR"
   }
 
-export const createUserProfileDocument = async (userAuth, additionalData) => {
+export const createUserProfileDocument = async (userAuth, additionalData) => { //query inside of firestore to see if the user exists
     if (!userAuth) return  //if userAuth object does not exist
 
     const userRef = firestore.doc(`users/${userAuth.uid}`)
 
     const snapShot = await userRef.get();
 
-    if(!snapShot.exists) {
+    if(!snapShot.exists) { // if it doesnt exist we will create a piece of data with document ref obj
         const { displayName, email } = userAuth;
         const createdAt = new Date();
 
         try {
-            await userRef.set({
+            await userRef.set({ //create method
               displayName,
                 email,
                 createdAt,
