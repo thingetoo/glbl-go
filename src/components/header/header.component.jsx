@@ -1,10 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/worldwide.svg";
+import { connect } from "react-redux";
+
 import { auth } from "../../firebase/firebase.ulits";
-import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+
+import { ReactComponent as Logo } from "../../assets/worldwide.svg";
 
 import "./header.styles.scss";
 
@@ -17,10 +19,9 @@ const Header = ({ currentUser, hidden }) => (
       <Link className="option" to="/shop">
         SHOP
       </Link>
-      <Link className="option" to="/contact">
+      <Link className="option" to="/shop">
         CONTACT
       </Link>
-      {/* if current user than the signout button will display - the onclick method will signout the user */}
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
